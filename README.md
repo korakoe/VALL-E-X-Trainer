@@ -1,6 +1,6 @@
 # VALL-E X: Multilingual Text-to-Speech Synthesis and Voice Cloning 🔊
  
-## Fork README
+## README
 
 This repository has made some modifications to [VALL-E-X-Trainer-by-CustomData](https://github.com/0417keito/VALL-E-X-Trainer-by-CustomData)
 
@@ -8,8 +8,8 @@ This repository has made some modifications to [VALL-E-X-Trainer-by-CustomData](
 - Modified the default learning rate to reduce the likelihood of gradient vanishing
 - Reduced the Maxtoken number to lower the required Vram, correspondingly, accumulate gradients of 5 batches before performing a backward pass
 
-We fine-tuned a 50-hour single speaker Chinese dataset, and trained it for 8 hours on a Tesla V100 32GB, with the model roughly overfitting after the fourth hour. 
-We successfully replicated the accent and voice. 
+We fine-tuned a 50-hour single speaker Chinese dataset, and trained it for 8 hours on a Tesla V100 32GB, with the model roughly overfitting after the fourth hour. We successfully replicated the accent and voice. 
+
 However, the results generated at present are not very stable, and it takes about 5-10 attempts to obtain a satisfactory sample.
 
 **If you like this project, please support the original author.**
