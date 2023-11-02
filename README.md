@@ -1,8 +1,15 @@
 # VALL-E X: Multilingual Text-to-Speech Synthesis and Voice Cloning 🔊
  
 ## Fork README
+
+I have made some modifications based on https://github.com/0417keito/VALL-E-X-Trainer-by-CustomData
+
+If you like this project, please support the original author.
+
 This repository eliminates the cumbersome dependencies of VALL-E-X and allows for fine tuning on custom data sets.
 Please refer to the original README as the basic operation has not been changed at all from the original.
+
+https://github.com/0417keito/VALL-E-X-Trainer-by-CustomData
 
 ## Current Accomplishments
 The training code worked.
