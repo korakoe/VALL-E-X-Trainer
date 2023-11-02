@@ -4,7 +4,7 @@
 
 This repository has made some modifications to [VALL-E-X-Trainer-by-CustomData](https://github.com/0417keito/VALL-E-X-Trainer-by-CustomData)
 
-- Fixed an error with Pathlib on Linux systems
+- Fixed an error with Pathlib on Linux systems and fixed some minor bugs.
 - Modified the default learning rate to reduce the likelihood of gradient vanishing
 - Reduced the Maxtoken number to lower the required Vram, correspondingly, accumulate gradients of 5 batches before performing a backward pass
 
