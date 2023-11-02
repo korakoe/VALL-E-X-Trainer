@@ -2,14 +2,16 @@
  
 ## Fork README
 
-I have made some modifications based on https://github.com/0417keito/VALL-E-X-Trainer-by-CustomData
+This repository has made some modifications to [VALL-E-X-Trainer-by-CustomData](https://github.com/0417keito/VALL-E-X-Trainer-by-CustomData)
 
-If you like this project, please support the original author.
+- Fixed an error with Pathlib on Linux systems
+- Modified the default learning rate to reduce the likelihood of gradient vanishing
+- Reduced the Maxtoken number to lower the required Vram, correspondingly, accumulate gradients of 5 batches before performing a backward pass
+
+**If you like this project, please support the original author.**
 
 This repository eliminates the cumbersome dependencies of VALL-E-X and allows for fine tuning on custom data sets.
 Please refer to the original README as the basic operation has not been changed at all from the original.
-
-https://github.com/0417keito/VALL-E-X-Trainer-by-CustomData
 
 ## Current Accomplishments
 The training code worked.
