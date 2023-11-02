@@ -8,6 +8,10 @@ This repository has made some modifications to [VALL-E-X-Trainer-by-CustomData](
 - Modified the default learning rate to reduce the likelihood of gradient vanishing
 - Reduced the Maxtoken number to lower the required Vram, correspondingly, accumulate gradients of 5 batches before performing a backward pass
 
+Currently, we are testing on a 50-hour single-speaker Chinese dataset using a Tesla V100 32GB for fine-tuning over a period of 4 hours. 
+We are able to successfully replicate the accent and voice. 
+However, the results generated at the moment are not very stable, and it takes about 5-10 tries to obtain a satisfactory sample.
+
 **If you like this project, please support the original author.**
 
 This repository eliminates the cumbersome dependencies of VALL-E-X and allows for fine tuning on custom data sets.
