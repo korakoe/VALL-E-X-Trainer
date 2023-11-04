@@ -9,12 +9,13 @@ _id_to_symbol = {i: s for i, s in enumerate(symbols)}
 
 
 class PhonemeBpeTokenizer:
-  def __init__(self, tokenizer_path = None):
-    self.tokenizer = Tokenizer.from_file("utils/g2p/bpe_69.json")
+  def __init__(self, tokenizer_path = "./utils/g2p/bpe_1024.json", cleaner="cje_cleaners"):
+    self.tokenizer = Tokenizer.from_file(tokenizer_path)
+    self.cleaner = cleaner
 
   def tokenize(self, text):
     # 1. convert text to phoneme
-    phonemes, langs = _clean_text(text, ['cje_cleaners'])
+    phonemes, langs = _clean_text(text, [self.cleaner])
     # 2. replace blank space " " with "_"
     phonemes = phonemes.replace(" ", "_")
     # 3. tokenize phonemes
