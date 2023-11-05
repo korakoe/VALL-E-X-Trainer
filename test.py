@@ -27,7 +27,7 @@ def get_model(device):
 
     checkpoints_dir = "./checkpoints"
 
-    model_checkpoint_name = "vallex-checkpoint_modified.pt"
+    model_checkpoint_name = "vallex-checkpoint.pt"
     if not os.path.exists(checkpoints_dir): os.mkdir(checkpoints_dir)
     if not os.path.exists(os.path.join(checkpoints_dir, model_checkpoint_name)):
         import wget
