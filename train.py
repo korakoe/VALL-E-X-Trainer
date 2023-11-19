@@ -218,6 +218,21 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--max-duration",
+        type=int,
+        default=120,
+        help="""the maximum training duration.
+            """,
+    )
+    parser.add_argument(
+        "--max-size",
+        type=int,
+        default=20,
+        help="""the maximum training size.
+                """,
+    )
+
+    parser.add_argument(
         "--dtype",
         type=str,
         default="float16",
@@ -975,8 +990,8 @@ def run(rank, world_size, args):
     else:
         sampler_state_dict = None
 
-    train_dl = create_dataset(params.train_dir, dataloader_process_only=False)
-    valid_dl = create_dataset(params.valid_dir, dataloader_process_only=False)
+    train_dl = create_dataset(params.train_dir, dataloader_process_only=False, max_size=params.max_size, max_duration=params.max_duration)
+    valid_dl = create_dataset(params.valid_dir, dataloader_process_only=False, max_size=params.max_size, max_duration=params.max_duration)
 
     scaler = GradScaler(
         enabled=(params.dtype in ["fp16", "float16"]), init_scale=1.0

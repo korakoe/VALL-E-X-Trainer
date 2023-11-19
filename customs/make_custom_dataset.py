@@ -52,7 +52,7 @@ def make_prompts(name, audio_prompt_path, transcript=None, cleaner="cje_cleaners
 
     return audio_tokens, text_tokens, langs, text_pr
     
-def create_dataset(data_dir, dataloader_process_only):
+def create_dataset(data_dir, dataloader_process_only, max_duration=120, max_size=20):
     if dataloader_process_only:
         h5_output_path=f"{data_dir}/audio_sum.hdf5"
         ann_output_path=f"{data_dir}/audio_ann_sum.txt"
@@ -82,7 +82,7 @@ def create_dataset(data_dir, dataloader_process_only):
                     except Exception as e:
                         print(f"An error occurred: {e}")
     else:
-        dataloader = create_dataloader(data_dir=data_dir)
+        dataloader = create_dataloader(data_dir=data_dir, max_duration=max_duration, max_size=max_size)
         return dataloader
 
 def create_dataset_ljspeech(dir_to_txt, dataloader_process_only):

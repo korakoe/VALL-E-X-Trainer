@@ -4,3 +4,10 @@ exp/valle_dev/checkpoint-10000.pt
 exp/valle_dev/epoch-1.pt
 exp/valle_dev/best-valid-loss.pt
 checkpoints/vallex-checkpoint_modified.pt
+.idea/discord.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/VALL-E-X-Trainer.iml
+.idea/vcs.xml
